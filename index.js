@@ -86,6 +86,11 @@ const Cargar = () => {
   pistas.push(pistaActual);
 
 
+
+  discos.push(pistas);
+
+  console.log(discos);
+
   alert(`Discos cargados: ${discos.length}, podes cargar mas discos si queres`);
 
 
@@ -121,11 +126,16 @@ const Mostrar = () => {
     <div>
         <ul>
             <li>Pistas:${pista.nombrePista} </li>
-            <li>Duracion de pista:${pista.duracionPista} </li>
+            <li>Duracion de pista: <strong id="rojo"> ${pista.duracionPista} </strong> </li>
         </ul>
     </div>
 
 <br>`
+
+    if(duracionPista > 180){
+        document.querySelector('rojo').style.color = 'red';
+    }
+
   })
 
 
